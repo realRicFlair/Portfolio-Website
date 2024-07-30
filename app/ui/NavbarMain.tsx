@@ -5,7 +5,7 @@ import AcmeLogo from './acme-logo';
 
 export default function NavbarMain() {
   return (
-    <nav className="bg-black rounded-2xl p-4">
+    <nav className="bg-black rounded-2xl p-3">
       <div className="mx-auto container flex items-center justify-between">
         <AcmeLogo />
         <div className="flex space-x-10 text-lg">

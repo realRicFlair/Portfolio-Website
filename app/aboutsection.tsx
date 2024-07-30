@@ -2,7 +2,7 @@ import { HeadingDivider } from "./ui/HeadingDivider"
 
 export default function AboutSection(){
     return (
-        <section id="about" className="section">
+        <div className="mt-10 md:mt-20">
             <HeadingDivider title="About Me"/>
             <div className="pt-10 pb-16 max-w-5xl flex flex-col gap-3">
                 <p className="text-lg"> My name is Adi, a CS major currently studying at Simon Fraser University </p>
@@ -12,6 +12,6 @@ export default function AboutSection(){
                 </p>
 
             </div>
-        </section>
+        </div>
     )
 }
