@@ -11,6 +11,7 @@ import { LazyMotion, domAnimation, m } from "framer-motion";
 import AboutSection from './aboutsection';
 import NavbarMain from './ui/NavbarMain';
 import ProjectsSnippet from './ui/ProjectsSnippet';
+import ArrowButton from './ui/ArrowButton';
 
 const RotatingGlassCube = dynamic(() => import('./ui/glassCube'))
 
@@ -23,19 +24,13 @@ export default function Page() {
       <NavbarMain />
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg px-6 py-10 md:w-2/5 md:px-20">
-          <div
-            className="relative w-0 h-0 border-l-[15px] border-r-[15px] border-b-[26px] border-l-transparent border-r-transparent border-b-black"
-          />
+          <div className="relative w-0 h-0 border-l-[15px] border-r-[15px] border-b-[26px] border-l-transparent border-r-transparent border-b-black" />
           <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}>
-              Hi I'm <strong>Adi</strong>, a passionate CS student currently stuying at SFU
-            </p>
-          <Link
-            href="/dashboard"
-            className="flex items-center gap-5 self-start rounded-lg bg-black px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-800 md:text-base"
-          >
-            <span>See my latest projects</span> <ArrowRightIcon className="w-5 md:w-6" />
-          </Link>
+            Hi I'm <strong>Adi</strong>, a passionate CS student currently stuying at SFU
+          </p>
+          <ArrowButton text="Learn more about me!" href="/dashboard" />
         </div>
+
         <div className="flex items-center justify-center p-6 md:w-1/2 md:px-10 md:py-12">
           <Suspense fallback={<div>Loading...</div>}>
             <RotatingGlassCube />
@@ -44,8 +39,8 @@ export default function Page() {
       </div>
 
       <div className="mt-10 md:mt-20">
-      <AboutSection />
-      <ProjectsSnippet />
+        <AboutSection />
+        <ProjectsSnippet />
       </div>
     </main>
   );

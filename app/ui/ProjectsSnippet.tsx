@@ -2,6 +2,7 @@
 'use client'
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import ArrowButton from './ArrowButton';
 
 const projects = [
   { id: 1, title: 'Project One', description: 'Description of Project One' },
@@ -32,9 +33,7 @@ const ProjectsSnippet = () => {
         ))}
       </motion.div>
       <div className="mt-6 text-center">
-        <Link href="/projects" className="text-blue-500 hover:underline">
-          View All Projects
-        </Link>
+        <ArrowButton text="View All Projects" href="projects"/>
       </div>
     </div>
   );
